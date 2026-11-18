@@ -1,0 +1,1335 @@
+Review Quiz 3A - TCPIP Commands & Socket Prog concepts
+Muhammad Azeem
+Due Date
+Dec 8, 2026, 11:59 PM
+Time Limit
+No time limit
+Number of Questions
+20
+Assessment Statistics
+95%
+190 out of 200 points
+190
+Out of 200 pointsTime for this attempt: 4 minutes 13 seconds
+4 minutes 13 seconds04:13
+Time for this attempt
+Your Answers:
+Results for question 1.
+1
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider client-server model. Which one of the following choices is NOT correct?
+Iterative server iterates through each client, handling it one at a time.
+, Not Selected
+A concurrent server with a pool of threads may serve a client with a thread from the pool.
+, Not Selected
+Concurrent server handles multiple clients at the same time.
+, Not Selected
+Correct answer:
+There are three main classes of servers: synchronous, iterative, and concurrent.
+A concurrent server may spawn a child process with fork to serve a client.
+, Not Selected
+Results for question 2.
+2
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Client needs to know Server's IP address and port to be connected. Server's IP address (sin_addr) and port number (sin_port) fields in the Internet socket address structure (sockaddr_in) must be in specific formats.
+ 
+This ____ function convert an IP address in ASCII command-line argument (for example, "192.10.16.4") into the proper format (sin_addr).
+Correct answer:
+inet_aton or inet_addr
+inet_addr32 or str2port
+, Not Selected
+sin_addr
+, Not Selected
+inet_port
+, Not Selected
+inet_sin or sin_port16
+, Not Selected
+Results for question 3.
+3
+10 / 10 points
+Multiple Choice
+[APUE11.6] _____ objects are more general than this, however. They allow an arbitrary number of threads to wait until all of the threads have completed processing, but the threads don’t have to exit. They can continue working after all threads have reached the ____.
+reader-writer lock
+, Not Selected
+spinlock
+, Not Selected
+mutex
+, Not Selected
+message queue
+, Not Selected
+semaphore
+, Not Selected
+conditional variable
+, Not Selected
+Correct answer:
+barrier
+Results for question 4.
+4
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] The ____ utility was written by Mike Muuss in 1983 as a tool to troubleshoot problems in an IP network. It is inspired by David Mills on using ICMP echo packets for IP network diagnosis and measurements. RFC1122 prescribes that any host must process an ICMP Echo Request and issue an Echo Reply in return.
+netstat
+, Not Selected
+traceroute
+, Not Selected
+ifconfig
+, Not Selected
+Correct answer:
+ping
+nslookup
+, Not Selected
+Results for question 5.
+5
+10 / 10 points
+Multiple Choice
+[APUE11.6] ____ is often used as low-level primitives to implement other types of locks. Depending on the system architecture, they can be implemented efﬁciently using test-and-set instructions.
+mutex
+, Not Selected
+Correct answer:
+spinlock
+conditional variable
+, Not Selected
+semaphore
+, Not Selected
+reader-writer lock
+, Not Selected
+barrier
+, Not Selected
+message queue
+, Not Selected
+Results for question 6.
+6
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider TCP. Which one of the following choices is NOT correct?
+TCP provides a flow-control.
+, Not Selected
+TCP takes care of details such as acknowledgments, timeouts, retransmissions, and the like.
+, Not Selected
+TCP sockets are an example of stream sockets.
+, Not Selected
+TCP provides a reliable, full-duplex byte stream to its users.
+, Not Selected
+Correct answer:
+TCP is a connection-sensitive protocol
+Results for question 7.
+7
+10 / 10 points
+Multiple Choice
+[APUE11.6] When a reader–writer lock is ____ locked, all threads attempting to ___ are given access, but all threads attempting to write must wait until the lock is released by all threads in ____.
+access
+, Not Selected
+write
+, Not Selected
+free
+, Not Selected
+allocate
+, Not Selected
+Correct answer:
+read
+update
+, Not Selected
+Results for question 8.
+8
+0 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider TCP socket programming. The following diagram illustrates _____ process.
+ 
+ 
+TCP bind
+, Not Selected
+Client-side
+, Not Selected
+Incorrect answer:
+Socket establishment and termination
+Correct Answer:
+Server-side
+Server-side
+, Not Selected
+TCP 4-way handshaking
+, Not Selected
+TCP 3-way handshaking
+, Not Selected
+Results for question 9.
+9
+10 / 10 points
+Multiple Choice
+[APUE11.6] A mutex variable must be ﬁrst initialized by either setting it to the constant _____ (for statically allocated mutexes only) or calling ____.
+PTHREAD_MUTEX_INIT, pthread_mutex_allocate
+, Not Selected
+pthread_mutex_allocate, pthread_mutex_initialize
+, Not Selected
+Correct answer:
+PTHREAD_MUTEX_INITIALIZER, pthread_mutex_init
+PTHREAD_MUTEX_T, pthread_mutex_init
+, Not Selected
+pthread_mutex_t, pthread_mutex_start
+, Not Selected
+Results for question 10.
+10
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] The following output shows the result of ____ utility.
+ 
+64 bytes from 93.184.216.119: icmp_seq=0 ttl=56 time=11.632 ms
+64 bytes from 93.184.216.119: icmp_seq=1 ttl=56 time=11.726 ms
+64 bytes from 93.184.216.119: icmp_seq=2 ttl=56 time=10.683 ms
+64 bytes from 93.184.216.119: icmp_seq=3 ttl=56 time=9.674 ms
+64 bytes from 93.184.216.119: icmp_seq=4 ttl=56 time=11.127 ms
+Correct answer:
+ping
+ifconfig
+, Not Selected
+nslookup
+, Not Selected
+traceroute
+, Not Selected
+netstat
+, Not Selected
+Results for question 11.
+11
+10 / 10 points
+Multiple Choice
+[APUE11.6] One additional mutex primitive allows us to bound the time that a thread blocks when a mutex it is trying to acquire is already locked. The ____ function is equivalent to pthread_mutex_lock, but if the timeout value is reached, it will return the error code ETIMEDOUT without locking the mutex.
+pthread_mutex_timelock
+, Not Selected
+pthread_mutex_timelimit
+, Not Selected
+pthread_mutex_time
+, Not Selected
+pthread_mutex_timeset
+, Not Selected
+Correct answer:
+pthread_mutex_timedlock
+Results for question 12.
+12
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider the features or advantages of TCP. TCP provides ______ connection over which TCP client establishes with servers and exchanges data. Which one of the following choices is NOT correct?
+stateful
+, Not Selected
+reliable
+, Not Selected
+synchronous
+, Not Selected
+full-duplexed
+, Not Selected
+Correct answer:
+atomic
+Results for question 13.
+13
+10 / 10 points
+Multiple Choice
+[APUE11.6] To lock a reader–writer lock in read mode, we call ____.
+pthread_writelock
+, Not Selected
+Correct answer:
+pthread_rwlock_rdlock
+pthread_readlock
+, Not Selected
+pthread_rwlock_read
+, Not Selected
+pthread_rwlock_readlock
+, Not Selected
+Results for question 14.
+14
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider IPv4 and IPv6. Which one of the following choices is NOT correct?
+IPv4 has been the workhorse protocol of the IP suite since the early 1980s.
+, Not Selected
+IPv6 was designed in the mid-1990s as a replacement for IPv4.
+, Not Selected
+IPv6 has a larger address comprising 128 bits.
+, Not Selected
+Correct answer:
+IPv4 uses 16-bit addresses.
+IPv4 provides packet delivery service for TCP, UDP, SCTP, ICMP, and IGMP.
+, Not Selected
+Results for question 15.
+15
+10 / 10 points
+Multiple Choice
+[APUE11.6] When we use more than one mutex in our programs, a(n) ____ can occur if we allow one thread to hold a mutex and block while trying to lock a second mutex at the same time that another thread holding the second mutex tries to lock the ﬁrst mutex. Neither thread can proceed, because each needs a resource that is held by the other, so we have a(n) ____.
+mutex locking
+, Not Selected
+mutex interruption
+, Not Selected
+threshing
+, Not Selected
+Correct answer:
+deadlock
+spin
+, Not Selected
+busy-wait
+, Not Selected
+Results for question 16.
+16
+10 / 10 points
+Multiple Choice
+[APUE11.6] ____ is useful when used in a nonpreemptive kernel: besides providing a mutual exclusion mechanism, they block interrupts so an interrupt handler can’t deadlock the system by trying to acquire a spin lock that is already locked (think of interrupts as another type of preemption). In these types of kernels, interrupt handlers can’t sleep, so the only synchronization primitives they can use are ____.
+reader-writer lock
+, Not Selected
+message queue
+, Not Selected
+semaphore
+, Not Selected
+Correct answer:
+spinlock
+conditional variable
+, Not Selected
+mutex
+, Not Selected
+barrier
+, Not Selected
+Results for question 17.
+17
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider TCP socket programming. Which one of the following choices is NOT correct?
+The well-known and reserved ports: 0 through 1023.
+, Not Selected
+One end of Socket pair is the local IP address and local port of the host.
+, Not Selected
+A socket consists of two values (an IP address and a port number) that identify each endpoint.
+, Not Selected
+Correct answer:
+All three transport layers (UDP, SCTP and TCP) use 32-bit integer port numbers.
+A socket pair uniquely identifies every TCP connection on a network.
+, Not Selected
+Socket pair is the four-tuple that defines the two endpoints of a TCP connection.
+, Not Selected
+Results for question 18.
+18
+10 / 10 points
+Multiple Choice
+[APUE11.6] The condition is the state of the work queue. We protect the condition with a mutex and evaluate the condition in a while loop. When we put a message on the work queue, we need to hold the mutex, but we don’t need to hold the mutex when we signal the waiting threads. As long as it is okay for a thread to pull the message off the queue before we call a signal, we can do this after releasing the mutex. Since we check the condition in a while loop, this doesn’t present a problem; a thread will wake up, ﬁnd that the queue is still empty, and go back to waiting again. If the code couldn’t tolerate this race, we would need to hold the mutex when we signal the threads. This is about ____ mechanism.
+barrier
+, Not Selected
+mutex
+, Not Selected
+message queue
+, Not Selected
+Correct answer:
+conditional variable
+reader-writer lock
+, Not Selected
+signal
+, Not Selected
+socket
+, Not Selected
+semaphore
+, Not Selected
+Results for question 19.
+19
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] _____ is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary. After that, it is usually only needed when debugging or when system tuning is needed. If no arguments are given, it displays the status of the currently active interfaces. 
+Correct answer:
+ifconfig
+nslookup
+, Not Selected
+traceroute
+, Not Selected
+netstat
+, Not Selected
+ping
+, Not Selected
+Results for question 20.
+20
+10 / 10 points
+Multiple Choice
+[APUE11.6] While it is set, any other thread that tries to set it will block until we release it. If more than one thread is blocked when we unlock the ____, then all threads blocked on the lock will be made runnable, and the ﬁrst one to run will be able to set the lock. The others will see that the ____ is still locked and go back to waiting for it to become available again. In this way, only one thread will proceed at a time.
+deadlock
+, Not Selected
+barrier
+, Not Selected
+pipe
+, Not Selected
+message queue
+, Not Selected
+semaphore
+, Not Selected
+Correct answer:
+mutex
+conditional variable
+, Not Selected
+livelock
+
+
+
+Review Quiz 3B - APUE Ch11 Sec6 IPC
+Muhammad Azeem
+Due Date
+Dec 8, 2026, 11:59 PM
+Time Limit
+No time limit
+Number of Questions
+10
+Assessment Statistics
+100%
+100 out of 100 points
+100
+Out of 100 pointsTime for this attempt: 2 minutes 23 seconds
+2 minutes 23 seconds02:23
+Time for this attempt
+Your Answers:
+Results for question 1.
+1
+10 / 10 points
+Multiple Choice
+[APUE11.6] _____ objects are more general than this, however. They allow an arbitrary number of threads to wait until all of the threads have completed processing, but the threads don’t have to exit. They can continue working after all threads have reached the ____.
+message queue
+, Not Selected
+spinlock
+, Not Selected
+semaphore
+, Not Selected
+Correct answer:
+barrier
+reader-writer lock
+, Not Selected
+conditional variable
+, Not Selected
+mutex
+, Not Selected
+Results for question 2.
+2
+10 / 10 points
+Multiple Choice
+[APUE11.6] Only one thread at a time can hold a(n) ____ in write mode, but multiple threads can hold a(n) ____ in read mode at the same time.
+signal
+, Not Selected
+socket
+, Not Selected
+barrier
+, Not Selected
+conditional variable
+, Not Selected
+semaphore
+, Not Selected
+message queue
+, Not Selected
+Correct answer:
+reader-writer lock
+mutex
+, Not Selected
+Results for question 3.
+3
+10 / 10 points
+Multiple Choice
+[APUE11.6] A reader–writer lock is initialized by calling ____.
+pthread_rdwtlock_init
+, Not Selected
+pthread_readwritelock_init
+, Not Selected
+pthread_rw_lock_init
+, Not Selected
+Correct answer:
+pthread_rwlock_init
+pthread_reader_writer_lock_init
+, Not Selected
+Results for question 4.
+4
+10 / 10 points
+Multiple Choice
+[APUE11.6] At user level, ____ is not as useful unless you are running in a real-time scheduling class that doesn’t allow preemption. User-level threads running in a time-sharing scheduling class can be descheduled when their time quantum expires or when a thread with a higher scheduling priority becomes runnable. In these cases, if a thread is holding ____, it will be put to sleep and other threads blocked on the lock will continue waiting longer than intended.
+mutex
+, Not Selected
+reader-writer lock
+, Not Selected
+barrier
+, Not Selected
+conditional variable
+, Not Selected
+Correct answer:
+spinlock
+message queue
+, Not Selected
+semaphore
+, Not Selected
+Results for question 5.
+5
+10 / 10 points
+Multiple Choice
+[APUE11.6] With this locking mechanism, there are two functions to notify threads that a condition has been satisﬁed. The ____ function will wake up at least one thread waiting on a condition, whereas the ____ function will wake up all threads waiting on a condition.
+pthread_cond_call, pthread_cond_broadcast
+, Not Selected
+Correct answer:
+pthread_cond_signal, pthread_cond_broadcast
+pthread_cond_wakeone, pthread_cond_wakeall
+, Not Selected
+pthread_cond_signalone, pthread_cond_signalall
+, Not Selected
+pthread_cond_signal, pthread_cond_signalall
+, Not Selected
+Results for question 6.
+6
+10 / 10 points
+Multiple Choice
+[APUE11.6] When we use more than one mutex in our programs, a(n) ____ can occur if we allow one thread to hold a mutex and block while trying to lock a second mutex at the same time that another thread holding the second mutex tries to lock the ﬁrst mutex. Neither thread can proceed, because each needs a resource that is held by the other, so we have a(n) ____.
+mutex interruption
+, Not Selected
+busy-wait
+, Not Selected
+Correct answer:
+deadlock
+spin
+, Not Selected
+mutex locking
+, Not Selected
+threshing
+, Not Selected
+Results for question 7.
+7
+10 / 10 points
+Multiple Choice
+[APUE11.6] _____ is well suited for situations in which data structures are read more often than they are modiﬁed. When a(n) ____ is held in write mode, the data structure it protects can be modiﬁed safely, since only one thread at a time can hold the lock in write mode.
+Correct answer:
+reader-writer lock
+message queue
+, Not Selected
+socket
+, Not Selected
+mutex
+, Not Selected
+barrier
+, Not Selected
+spin lock
+, Not Selected
+conditional variable
+, Not Selected
+semaphore
+, Not Selected
+Results for question 8.
+8
+10 / 10 points
+Multiple Choice
+[APUE11.6] ____ is often used as low-level primitives to implement other types of locks. Depending on the system architecture, they can be implemented efﬁciently using test-and-set instructions.
+message queue
+, Not Selected
+semaphore
+, Not Selected
+Correct answer:
+spinlock
+barrier
+, Not Selected
+conditional variable
+, Not Selected
+mutex
+, Not Selected
+reader-writer lock
+, Not Selected
+Results for question 9.
+9
+10 / 10 points
+Multiple Choice
+[APUE11.6] To initialize a mutex with the default attributes, we set attr to NULL. To lock a mutex, we call ____. If the mutex is already locked, the calling thread will block until the mutex is unlocked. To unlock a mutex, we call ____.
+Correct answer:
+pthread_mutex_lock, pthread_mutex_unlock
+pthread_mutex_begin, pthread_mutex_end
+, Not Selected
+pthread_mutex_start, pthread_mutex_stop
+
+ 
+
+ 
+
+, Not Selected
+pthread_mutex_enter, pthread_mutex_exit
+, Not Selected
+pthread_mutex_access, pthread_mutex_unaccess
+, Not Selected
+Results for question 10.
+10
+10 / 10 points
+Multiple Choice
+[APUE11.6] ____ is like a mutex, except that instead of blocking a process by sleeping, the process is blocked by busy-waiting until the lock can be acquired.
+semaphore
+, Not Selected
+lock
+, Not Selected
+Correct answer:
+spinlock
+conditional variable
+, Not Selected
+barrier
+, Not Selected
+reader-writer lock
+, Not Selected
+message queue
+
+
+
+Review Quiz 3C - APUE Ch16
+Muhammad Azeem
+Due Date
+Dec 8, 2026, 11:59 PM
+Time Limit
+No time limit
+Number of Questions
+10
+Assessment Statistics
+100%
+100 out of 100 points
+100
+Out of 100 pointsTime for this attempt: 2 minutes 32 seconds
+2 minutes 32 seconds02:32
+Time for this attempt
+Your Answers:
+Results for question 1.
+1
+10 / 10 points
+Multiple Choice
+[APUE16] The single most important motive for the new IPv6 protocol is:
+Correct answer:
+Address space expansion
+Protocol extensibility
+, Not Selected
+Performance improvement
+, Not Selected
+Header simplification
+, Not Selected
+Results for question 2.
+2
+10 / 10 points
+Multiple Choice
+[APUE16] In a layered protocol architecture (e.g., TCP/IP), a benefit and rationale for a module at one layer relying on another module at the layer below for some service is:
+The lower-layer module can extend its service to multiple modules at the higher layer
+, Not Selected
+Correct answer:
+All of the above
+The higher-layer module can dispense with coding the logic for that service
+, Not Selected
+If called for, transparent to the higher-layer module, the lower-layer module can be replaced
+, Not Selected
+Results for question 3.
+3
+10 / 10 points
+Multiple Choice
+[APUE16] Which of the following statements about socket programming (socket descriptor) is not correct?
+a socket endpoint is represented as a ﬁle descriptor.
+, Not Selected
+the socket descriptors can be passed to child processes that execute programs that know nothing about sockets.
+, Not Selected
+Although we can exchange data using read and write, that is about all we can do with these two functions.
+, Not Selected
+Correct answer:
+to receive packets from multiple clients, one must have at least one socket connection per each client.
+one can use read and write to communicate with a socket, as long as it is connected.
+, Not Selected
+using read and write with socket descriptors is signiﬁcant for one can pass socket descriptors to functions designed to work with local ﬁles.
+, Not Selected
+Results for question 4.
+4
+10 / 10 points
+Multiple Choice
+[APUE16] Which of the following is an application layer program designed to run on top of TCP:
+TELNET
+, Not Selected
+File Transfer Protocol (FTP)
+, Not Selected
+Correct answer:
+All of the above
+Simple Mail Transfer Program (SMTP)
+, Not Selected
+Results for question 5.
+5
+10 / 10 points
+Multiple Choice
+[APUE16] Consider the following code segment to set socketfd to get connected to a server. The IP address and port # of the server are provided via the first and second arguments to run this program. Complete the following statement (underlined) to set server's IP address.
+ 
+// socket
+int sockfd;
+struct sockaddr_in servaddr;
+char sendline[MAXLINE], recvline[MAXLINE];
+sockfd = socket(AF_INET, SOCK_STREAM, 0);
+// to run: program 127.0.0.1 3000
+struct sockaddr_in servaddr;
+memset(&servaddr, 0, sizeof(servaddr));
+servaddr.sin_family = AF_INET;
+ 
+servaddr.sin_addr.s_addr = _______
+ipv4_addr(argv[1])
+, Not Selected
+inet(argv[1])
+, Not Selected
+net_addr(argv[1])
+, Not Selected
+ip_addr(argv[1])
+, Not Selected
+Correct answer:
+inet_addr(argv[1])
+Results for question 6.
+6
+10 / 10 points
+Multiple Choice
+[APUE16] Consider the following code segment to set socketfd to get connected to a server. The IP address and port # of the server are provided via the first and second arguments to run this program. Complete the following statement (underlined) to set server's port#.
+ 
+// socket
+int sockfd;
+struct sockaddr_in servaddr;
+char sendline[MAXLINE], recvline[MAXLINE];
+sockfd = socket(AF_INET, SOCK_STREAM, 0);
+// to run: program 127.0.0.1 3000
+struct sockaddr_in servaddr;
+memset(&servaddr, 0, sizeof(servaddr));
+servaddr.sin_family = AF_INET;
+
+int port = atoi(argv[2]);
+servaddr.sin_port = ______(port);
+int2port
+, Not Selected
+itop
+, Not Selected
+htop
+, Not Selected
+Correct answer:
+htons
+ptoh
+, Not Selected
+Results for question 7.
+7
+10 / 10 points
+Multiple Choice
+[APUE16] Which of the following statements about socket programming (address byte ordering) is not correct?
+The byte ordering becomes visible to applications when they exchange formatted data.
+ 
+, Not Selected
+Regardless of the byte ordering, the most signiﬁcant byte (MSB) is always on the left, and the least signiﬁcant byte is always on the right.
+, Not Selected
+If the processor architecture supports big-endian byte order, then the highest byte address occurs in the least signiﬁcant byte (LSB).
+, Not Selected
+If the processor architecture supports little-endian byte order, then the highest byte address occurs in the most signiﬁcant byte (MSB).
+, Not Selected
+The TCP/IP protocol suite uses big-endian byte order.
+, Not Selected
+Correct answer:
+For a 32-bit integer with the value 0x04030201, the most signiﬁcant byte is 0x01, and the least signiﬁcant byte is 0x04 for little-endian byte order.
+Results for question 8.
+8
+10 / 10 points
+Multiple Choice
+[APUE16] ___ allows processes running on different computers (connected to a common network) to communicate with one another.
+semaphore
+, Not Selected
+Correct answer:
+socket
+process
+, Not Selected
+thread
+, Not Selected
+Results for question 9.
+9
+10 / 10 points
+Multiple Choice
+[APUE16] Which of the following statements about socket programming (nonblocking & asynchronous IO) is not correct?
+When the socket is in nonblocking mode, the send and recv functions will fail instead of blocking
+, Not Selected
+Normally, the recv functions will block when no data is immediately available.
+, Not Selected
+The blocking behavior of the send and recv functions can be changed by setting socket option.
+, Not Selected
+Normally, the send functions will block when there is not enough room in the socket’s output queue to send the message.
+, Not Selected
+Correct answer:
+When the socket is in blocking mode, the poll or select functions should be used to send or receive data.
+Results for question 10.
+10
+10 / 10 points
+Multiple Choice
+[APUE16] Which of the following is a transport layer protocol (TCP):
+IP
+, Not Selected
+Correct answer:
+UDP
+Ethernet
+, Not Selected
+Telnet
+
+
+
+Review Quiz 3D - Cloud Computing
+Muhammad Azeem
+Due Date
+Dec 8, 2026, 11:59 PM
+Time Limit
+No time limit
+Number of Questions
+10
+Assessment Statistics
+100%
+100 out of 100 points
+100
+Out of 100 pointsTime for this attempt: 1 minute 37 seconds
+1 minute 37 seconds01:37
+Time for this attempt
+Your Answers:
+Results for question 1.
+1
+10 / 10 points
+Multiple Choice
+[Cloud] Consider three models of Cloud Computing (NIST) as discussed in the class.
+ 
+_____ is defined as the capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider.
+ 
+Which one of the following choices is correct?
+Select the best answer.
+Correct answer:
+Platform as a Service (PaaS)
+Infrastructure as a Service (IaaS)
+, Not Selected
+Software as a Service (SaaS)
+, Not Selected
+Application as a Service (AaaS)
+, Not Selected
+Virtualization as a Service (VaaS)
+, Not Selected
+Results for question 2.
+2
+10 / 10 points
+Multiple Choice
+[Cloud] Consider the Cloud Computing as discussed in the class.
+ 
+The main enabling technology for cloud computing is _____.
+ 
+Which one of the following choices is Correct?
+workload balancing
+, Not Selected
+server-pool model
+, Not Selected
+Correct answer:
+virtualization
+client-server model
+, Not Selected
+augumentation
+, Not Selected
+Results for question 3.
+3
+10 / 10 points
+Multiple Choice
+[Cloud] Consider Three Service Models of Cloud Computing (NIST) as discussed in the class.
+ 
+Which one of the following choices is NOT correct?
+Platform as a Service (PaaS)
+, Not Selected
+Software as a Service (SaaS)
+, Not Selected
+Correct answer:
+Application as a Service (AaaS)
+Infrastructure as a Service (IaaS)
+, Not Selected
+Results for question 4.
+4
+10 / 10 points
+Multiple Choice
+[Cloud] Consider the major benefits of Cloud Computing as discussed in the class.
+ 
+Public-cloud delivery model converts capital expenditures (e.g., buying servers) to operational expenditure. This lowers effectively barriers to entry, as infrastructure is typically provided by a third party and need not be purchased for one-time or infrequent intensive computing tasks.
+ 
+This generates or causes one of the following benefits.
+Which one of the following choices is Correct?
+Correct answer:
+Cost Reduction
+Global Services
+, Not Selected
+Easier Maintenance
+, Not Selected
+Organizational Agility
+, Not Selected
+Multitenancy
+, Not Selected
+Results for question 5.
+5
+10 / 10 points
+Multiple Choice
+[Cloud] Consider the major benefits of Cloud Computing as discussed in the class.
+ 
+_____ enables centralization of infrastructure in locations with lower costs (such as real estate, electricity), increase of peak-load capacity and workload being managed by the providers (IT experts), and to improve utilization and efficiency of the systems.
+ 
+Which one of the following choices is Correct?
+Select the best answer.
+Organizational Agility
+, Not Selected
+Correct answer:
+Multitenancy
+Global Services
+, Not Selected
+Edge Service
+, Not Selected
+Cost Reduction
+, Not Selected
+Results for question 6.
+6
+10 / 10 points
+Multiple Choice
+[Cloud] Consider the major benefits of Cloud Computing as discussed in the class.
+ 
+____ is about flexibility for users with re-provisioning, adding, or expanding technological infrastructure resources.
+ 
+Which one of the following choices is correct? Select the best answer.
+Correct answer:
+Organizational Agility
+Global Services
+, Not Selected
+Easier Maintenance
+, Not Selected
+Multitenancy
+, Not Selected
+Cost Increase
+, Not Selected
+Results for question 7.
+7
+10 / 10 points
+Multiple Choice
+[Cloud] Consider Five Essential Characteristics of Cloud Computing (NIST) as discussed in the class.
+ 
+The provider's computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand.
+ 
+This is about _____.
+ 
+Select the best answer.
+Measured service.
+, Not Selected
+Rapid elasticity
+, Not Selected
+Broad network access
+, Not Selected
+Correct answer:
+Resource pooling
+On-demand self-service
+, Not Selected
+Results for question 8.
+8
+10 / 10 points
+Multiple Choice
+[Cloud] Consider the enabling technologies of Cloud Computing as discussed in the class.
+ 
+______ model is about the "packaging of computing resources, such as computation and storage, as a metered service similar to a traditional public utility, such as electricity."
+ 
+Which one of the following choices is correct? Select the best answer.
+Cloud-User Model
+, Not Selected
+Fog Computing
+, Not Selected
+Client-Server
+, Not Selected
+Grid Computing
+, Not Selected
+Correct answer:
+Utility Computing
+Results for question 9.
+9
+10 / 10 points
+Multiple Choice
+[Cloud] Consider Five Essential Characteristics of Cloud Computing (NIST) as discussed in the class.
+ 
+Capabilities can be elastically provisioned and released, in some cases automatically, to scale rapidly outward and inward commensurate with demand. To the consumer, the capabilities available for provisioning often appear unlimited and can be appropriated in any quantity at any time.
+ 
+This is about _____.
+ 
+Select the best answer.
+Resource pooling
+, Not Selected
+Measured service.
+, Not Selected
+On-demand self-service
+, Not Selected
+Broad network access
+, Not Selected
+Correct answer:
+Rapid elasticity
+Results for question 10.
+10
+10 / 10 points
+Multiple Choice
+[Cloud] Consider Five Essential Characteristics of Cloud Computing (NIST) as discussed in the class.
+ 
+Cloud systems automatically control and optimize resource use by leveraging a metering capability at some level of abstraction appropriate to the type of service (e.g., storage, processing, bandwidth, and active user accounts). Resource usage can be monitored, controlled, and reported, providing transparency for both the provider and consumer of the utilized service.
+ 
+This is about _____.
+ 
+Select the best answer.
+Broad network access
+, Not Selected
+Correct answer:
+Measured service.
+Resource pooling
+, Not Selected
+On-demand self-service
+, Not Selected
+Rapid elasticity
+
+
+
+Review Quiz 3E - Python (Sobell Ch12)
+Muhammad Azeem
+Due Date
+Dec 8, 2026, 11:59 PM
+Time Limit
+No time limit
+Number of Questions
+10
+Assessment Statistics
+100%
+100 out of 100 points
+100
+Out of 100 pointsTime for this attempt: 2 minutes 9 seconds
+2 minutes 9 seconds02:09
+Time for this attempt
+Your Answers:
+Results for question 1.
+1
+10 / 10 points
+Multiple Choice
+[Python] Which one of the following statements is incorrect?
+Lambda functions are referred to as anonymous functions.
+, Not Selected
+Correct answer:
+Lambda functions are more flexible than other functions because they can use an extensive functional features.
+In its most basic form, Lambda is another syntax for defining a function.
+, Not Selected
+Lambda functions in Python might not be bound to a name.
+, Not Selected
+Python supports Lambda functions.
+, Not Selected
+Results for question 2.
+2
+10 / 10 points
+Multiple Choice
+[Python] Which one of the code segments makes each element of "items" to be squared, and printed?
+for x in items { print(x*x) }
+, Not Selected
+for (x in items) print(x*x)
+, Not Selected
+Correct answer:
+for x in items : print(x*x)
+for x : items => print(x*x)
+, Not Selected
+for items AS x : print(x*x)
+, Not Selected
+Results for question 3.
+3
+10 / 10 points
+Multiple Choice
+[Python] One of the simplest re (for regular expression) methods is ___ returns a list that holds matches with a regular expression over a string.
+Correct answer:
+findall
+searchall
+, Not Selected
+index
+, Not Selected
+match
+, Not Selected
+global
+, Not Selected
+Results for question 4.
+4
+10 / 10 points
+Multiple Choice
+[Python] Consider a file "gm.py" listed below. Which of the following is incorrect to run this python file?
+ 
+#!/usr/bin/local/python
+print('Good morning!')
+python gm.py
+, Not Selected
+python < gm.py
+, Not Selected
+cat gm.py | python
+, Not Selected
+Correct answer:
+echo gm.py | python
+./gm.py
+, Not Selected
+Results for question 5.
+5
+10 / 10 points
+Multiple Choice
+[Python] Which one of the following statements opens a file and returns a file object called a file handle
+open(file, 'test_file', 'read')
+, Not Selected
+open('test_file', 'read')
+, Not Selected
+openfile('r', 'test_file')
+, Not Selected
+Correct answer:
+open('test_file', 'r')
+ofile('test_file', 'r')
+, Not Selected
+Results for question 6.
+6
+10 / 10 points
+Multiple Choice
+[Python] Which one of the following is correct given the code segment below?
+ 
+>>> A = ['a', 'b', 'c']
+>>> B = ['1', '2', '3']
+>>> all = [x + y for x in A for y in B]
+>>> print(all) 
+Correct answer:
+['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3']
+['1a', '2a', '3a', '1b', '2b', '3b', '1c', '2c', '3c']
+, Not Selected
+['a1', 'b2', 'c3']
+, Not Selected
+['a', 'b', 'c', '1', '2', '3']
+, Not Selected
+['1a', '1b', '1c', '2a', '2b', '2c', '3a', '3b', '3c']
+, Not Selected
+Results for question 7.
+7
+10 / 10 points
+Multiple Choice
+[Python] Consider the following code segment. Which one of the following statements is correct?
+ 
+random.sample(range(10), 10)
+This will generate 10 random numbers.
+, Not Selected
+This will generate a range of random numbers from -10 to 10.
+, Not Selected
+Correct answer:
+This will generate a range of numbers from 0 to 9, listed in random order.
+An error message
+, Not Selected
+This will generate a range of numbers from 1 to 10, listed in random order.
+, Not Selected
+Results for question 8.
+8
+10 / 10 points
+Multiple Choice
+[Python] Consider the following code segment. Which one of the following statements is correct?
+ 
+map(lambda x: x * 2, [1, 3, 4])
+This function requires an external library to run correctly.
+, Not Selected
+This function, when called, will pick up the first, third, and fourth elements of the argument (a list) to be doubled.
+, Not Selected
+Correct answer:
+This function will double each element of [1, 3, 4]
+This function requires two arguments to run correctly.
+, Not Selected
+This function has a syntax error
+, Not Selected
+Results for question 9.
+9
+10 / 10 points
+Multiple Choice
+[Python] Consider the following function definition. Which one is correct output?
+ 
+>>> def place_stuff(x = 10, y = 20, z = 30):
+        return x, y, z
+>>> place_stuff(1,2,3)
+Correct answer:
+(1, 2, 3)
+1, 2, 3
+, Not Selected
+1
+, Not Selected
+[1, 2, 3]
+, Not Selected
+An error message
+, Not Selected
+{1, 2, 3}
+, Not Selected
+Results for question 10.
+10
+10 / 10 points
+Multiple Choice
+[Python] After a file is opened for read with a variable f (a file handle), which one of the following code segment is correct to read each line using for loop?
+Correct answer:
+for line in f.readlines( ) : print(line)
+for line as f.readlines( ) : print(line)
+, Not Selected
+for line from f.readlines : print(line)
+, Not Selected
+for line in readlines( ) : print(line)
+, Not Selected
+for f.readlines( ) AS line : print(line)
+
+
+
+Review Quiz 3F - TCP/IP & network commands
+Muhammad Azeem
+Due Date
+Dec 8, 2026, 11:59 PM
+Time Limit
+No time limit
+Number of Questions
+10
+Assessment Statistics
+90%
+90 out of 100 points
+90
+Out of 100 pointsTime for this attempt: 1 minute 52 seconds
+1 minute 52 seconds01:52
+Time for this attempt
+Your Answers:
+Results for question 1.
+1
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] _____ is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary. After that, it is usually only needed when debugging or when system tuning is needed. If no arguments are given, it displays the status of the currently active interfaces. 
+Correct answer:
+ifconfig
+nslookup
+, Not Selected
+netstat
+, Not Selected
+ping
+, Not Selected
+traceroute
+, Not Selected
+Results for question 2.
+2
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] ____ is a network utility tool that displays the local host's network connections for transmission control protocol ((both incoming and outgoing), routing tables, and a number of network interface and network protocol statistics. It is used for finding problems in the network and to determine the amount of traffic on the network as a performance measurement. This command is used to find which TCP port is bound or free so that one may choose a free port for one's server to bind and listen.
+ping
+, Not Selected
+traceroute
+, Not Selected
+nslookup
+, Not Selected
+Correct answer:
+netstat
+ifconfig
+, Not Selected
+Results for question 3.
+3
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider IPv4 and IPv6. Which one of the following choices is NOT correct?
+IPv4 has been the workhorse protocol of the IP suite since the early 1980s.
+, Not Selected
+IPv6 was designed in the mid-1990s as a replacement for IPv4.
+, Not Selected
+Correct answer:
+IPv4 uses 16-bit addresses.
+IPv4 provides packet delivery service for TCP, UDP, SCTP, ICMP, and IGMP.
+, Not Selected
+IPv6 has a larger address comprising 128 bits.
+, Not Selected
+Results for question 4.
+4
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider TCP. Which one of the following choices is NOT correct?
+Correct answer:
+TCP is a connection-sensitive protocol
+TCP takes care of details such as acknowledgments, timeouts, retransmissions, and the like.
+, Not Selected
+TCP sockets are an example of stream sockets.
+, Not Selected
+TCP provides a flow-control.
+, Not Selected
+TCP provides a reliable, full-duplex byte stream to its users.
+, Not Selected
+Results for question 5.
+5
+0 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider TCP socket programming. The following diagram illustrates _____ process.
+ 
+ 
+Client-side
+, Not Selected
+TCP bind
+, Not Selected
+Incorrect answer:
+Socket establishment and termination
+Correct Answer:
+Server-side
+TCP 4-way handshaking
+, Not Selected
+TCP 3-way handshaking
+, Not Selected
+Server-side
+, Not Selected
+Results for question 6.
+6
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider client-server model. Which one of the following choices is NOT correct?
+A concurrent server with a pool of threads may serve a client with a thread from the pool.
+, Not Selected
+Concurrent server handles multiple clients at the same time.
+, Not Selected
+Correct answer:
+There are three main classes of servers: synchronous, iterative, and concurrent.
+Iterative server iterates through each client, handling it one at a time.
+, Not Selected
+A concurrent server may spawn a child process with fork to serve a client.
+, Not Selected
+Results for question 7.
+7
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] The following output shows the result of ____ utility.
+ 
+64 bytes from 93.184.216.119: icmp_seq=0 ttl=56 time=11.632 ms
+64 bytes from 93.184.216.119: icmp_seq=1 ttl=56 time=11.726 ms
+64 bytes from 93.184.216.119: icmp_seq=2 ttl=56 time=10.683 ms
+64 bytes from 93.184.216.119: icmp_seq=3 ttl=56 time=9.674 ms
+64 bytes from 93.184.216.119: icmp_seq=4 ttl=56 time=11.127 ms
+ifconfig
+, Not Selected
+nslookup
+, Not Selected
+traceroute
+, Not Selected
+netstat
+, Not Selected
+Correct answer:
+ping
+Results for question 8.
+8
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Client needs to know Server's IP address and port to be connected. Server's IP address (sin_addr) and port number (sin_port) fields in the Internet socket address structure (sockaddr_in) must be in specific formats. This ____ function converts a binary port number to the proper format (sin_port).
+host2net
+, Not Selected
+inet_host2net
+, Not Selected
+inetport
+, Not Selected
+inet_h2n
+, Not Selected
+Correct answer:
+htons
+Results for question 9.
+9
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Consider TCP socket programming. Which one of the following choices is NOT correct?
+Client and servers communicate by means of multiple layers of network protocols.
+, Not Selected
+Correct answer:
+Server needs to know client's socket prior to connection being requested.
+Client needs to know of the existence of and the address of the server.
+, Not Selected
+Many Clients normally communicate with one server at a time.
+, Not Selected
+The client-server model is one of the most used communication paradigms in networked systems.
+, Not Selected
+Results for question 10.
+10
+10 / 10 points
+Multiple Choice
+[TCPIP-UNP] Client needs to know Server's IP address and port to be connected. Server's IP address (sin_addr) and port number (sin_port) fields in the Internet socket address structure (sockaddr_in) must be in specific formats.
+ 
+This ____ function convert an IP address in ASCII command-line argument (for example, "192.10.16.4") into the proper format (sin_addr).
+inet_port
+, Not Selected
+inet_addr32 or str2port
+, Not Selected
+inet_sin or sin_port16
+, Not Selected
+sin_addr
+, Not Selected
+Correct answer:
+inet_aton or inet_addr
+
+
+

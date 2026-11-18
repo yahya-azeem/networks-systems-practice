@@ -1,0 +1,18 @@
+{
+  "name": "tcpip-apue-practice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Practice quiz for TCP/IP, APUE and cloud computing review questions, built with Svelte.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compile": "node scripts/compile-bank.mjs"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "svelte": "^5.58.0",
+    "vite": "^8.3.8"
+  }
+}
