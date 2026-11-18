@@ -24,7 +24,17 @@ const SET_NAMES = {
   '3D': 'Cloud computing',
   '3E': 'Python (Sobell ch. 12)',
   '3F': 'TCP/IP & network commands',
-  Extra: 'Additional — prior Test 3 bank',
+};
+
+// Additional cards keep their own topic but are filed into the matching review
+// set so they appear under 3B / 3C / 3F by default. The UI still marks them.
+const TOPIC_SETS = {
+  APUE11: '3B',
+  'APUE11.6': '3B',
+  APUE16: '3C',
+  Network: '3F',
+  Cloud: '3D',
+  Python: '3E',
 };
 
 const lines = fs.readFileSync(sourcePath, 'utf8').split(/\r?\n/);
@@ -200,9 +210,10 @@ for (const [index, entry] of additional.entries()) {
     throw new Error(`${label}: duplicates an existing question: ${entry.stem.slice(0, 70)}`);
   }
   signatures.add(key);
+  const set = TOPIC_SETS[entry.topic] ?? '3B';
   questions.push({
-    set: 'Extra',
-    sets: ['Extra'],
+    set,
+    sets: [set],
     topic: entry.topic,
     stem: entry.stem,
     options: entry.options,

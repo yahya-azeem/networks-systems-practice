@@ -11,12 +11,12 @@ export const sets = [
   {
     "id": "3B",
     "name": "APUE ch. 11.6 — IPC",
-    "count": 10
+    "count": 37
   },
   {
     "id": "3C",
     "name": "APUE ch. 16 — sockets",
-    "count": 10
+    "count": 21
   },
   {
     "id": "3D",
@@ -31,12 +31,7 @@ export const sets = [
   {
     "id": "3F",
     "name": "TCP/IP & network commands",
-    "count": 9
-  },
-  {
-    "id": "Extra",
-    "name": "Additional — prior Test 3 bank",
-    "count": 54
+    "count": 25
   }
 ];
 
@@ -1070,9 +1065,9 @@ export const questions = [
     "id": "q58"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Spin locks are useful when running in a real-time scheduling class that doesn't allow ____.",
@@ -1090,9 +1085,9 @@ export const questions = [
     "id": "q59"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Which of the following functions is used by a thread to obtain its ID?",
@@ -1114,9 +1109,9 @@ export const questions = [
     "id": "q60"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "What is the thread primitive corresponding to waitpid for a process?",
@@ -1134,9 +1129,9 @@ export const questions = [
     "id": "q61"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "When the default action is to terminate the process, what is expected for a signal sent to a thread?",
@@ -1152,9 +1147,9 @@ export const questions = [
     "id": "q62"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "If a thread knows that no thread cares about its return value, then which of the following functions does it call to indicate that resources associated with it can be released on termination?",
@@ -1176,9 +1171,9 @@ export const questions = [
     "id": "q63"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "___ is a synchronization mechanism that can be used to coordinate multiple threads working in parallel. This allows each thread to wait until all cooperating threads have reached the same point, and then continue executing from there.",
@@ -1196,9 +1191,9 @@ export const questions = [
     "id": "q64"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "When a thread is terminated, a thread can arrange for a function to be called when it exits. Which of the following statements is not correct?",
@@ -1215,9 +1210,9 @@ export const questions = [
     "id": "q65"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Which of the following functions is used by a thread to terminate itself?",
@@ -1239,9 +1234,9 @@ export const questions = [
     "id": "q66"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Which of the following functions is used to wait for a thread or threads to terminate?",
@@ -1263,9 +1258,9 @@ export const questions = [
     "id": "q67"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "A thread can arrange for functions to be called when it exits, similar to the way that the atexit function works for a process. Which function is used for this?",
@@ -1283,9 +1278,9 @@ export const questions = [
     "id": "q68"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Consider the following statements for a lock in thread programming.\n\npthread_mutex_t MutexLock;\npthread_mutex_init(&MutexLock, NULL);\n\nWhich of the following statements will lock the mutex called MutexLock?",
@@ -1302,9 +1297,9 @@ export const questions = [
     "id": "q69"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Spin locks are often used as low-level primitives to implement other types of locks, and can be implemented efficiently using the ___ instruction.",
@@ -1321,9 +1316,9 @@ export const questions = [
     "id": "q70"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "What is the thread primitive corresponding to fork for a process?",
@@ -1341,9 +1336,9 @@ export const questions = [
     "id": "q71"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Which of the following items is shared by all threads in a process?",
@@ -1359,9 +1354,9 @@ export const questions = [
     "id": "q72"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11",
     "stem": "Which of the following functions is used to create a thread?",
@@ -1383,9 +1378,9 @@ export const questions = [
     "id": "q73"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "When multiple threads of control share the same memory, each thread should see a consistent view of its data. Which one of the following statements is NOT correct?",
@@ -1402,9 +1397,9 @@ export const questions = [
     "id": "q74"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "With multiple threads of control, we can design our programs to do more than one thing at a time within a single process, with each thread handling a separate task. This approach can have several benefits. Which one of the following statements is NOT correct?",
@@ -1423,9 +1418,9 @@ export const questions = [
     "id": "q75"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "The pthread_join function acts as a ____ to allow one thread to wait until another thread exits.",
@@ -1444,9 +1439,9 @@ export const questions = [
     "id": "q76"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "We can protect our data and ensure access by only one thread at a time by using the pthreads mutual-exclusion interfaces. A(n) ____ is basically a lock that we set (lock) before accessing a shared resource and release (unlock) when we're done.",
@@ -1466,9 +1461,9 @@ export const questions = [
     "id": "q77"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "When a reader-writer lock is ____ locked, only one thread to ____ can have it while all threads attempting to read must wait until it is unlocked.",
@@ -1486,9 +1481,9 @@ export const questions = [
     "id": "q78"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "The _____ mechanism works only if we design our threads to follow the same data-access rules. The operating system doesn't serialize access to data for us. If we allow one thread to access a shared resource without first acquiring a lock, then inconsistencies can occur even though the rest of our threads do acquire the lock before attempting to access the shared resource.",
@@ -1507,9 +1502,9 @@ export const questions = [
     "id": "q79"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "A thread will ____ if it tries to lock the same mutex twice.",
@@ -1527,9 +1522,9 @@ export const questions = [
     "id": "q80"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "With multiple threads of control, we can design our programs to do more than one thing at a time within a single process, with each thread handling a separate task. This approach can have several benefits. Which one of the following statements is NOT correct?",
@@ -1546,9 +1541,9 @@ export const questions = [
     "id": "q81"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "A typical UNIX _____ can be thought of as having a single thread of control (that is, doing only one thing at a time).",
@@ -1565,9 +1560,9 @@ export const questions = [
     "id": "q82"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "To write lock a reader-writer lock, we call ____.",
@@ -1584,9 +1579,9 @@ export const questions = [
     "id": "q83"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "Although implementations vary, reader-writer locks usually block additional readers if a lock is already held in read mode and a thread is blocked trying to acquire the lock in write mode. This prevents a constant stream of readers from ____ waiting writers.",
@@ -1605,9 +1600,9 @@ export const questions = [
     "id": "q84"
   },
   {
-    "set": "Extra",
+    "set": "3B",
     "sets": [
-      "Extra"
+      "3B"
     ],
     "topic": "APUE11.6",
     "stem": "Assume that you have two mutexes, A and B, that you need to lock at the same time. If all threads always lock mutex A before mutex B, ____.",
@@ -1624,9 +1619,9 @@ export const questions = [
     "id": "q85"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "Which command can be used to display information about the user \"richard\" on the utdallas.edu host?",
@@ -1643,9 +1638,9 @@ export const questions = [
     "id": "q86"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "RFC is an acronym for ____.",
@@ -1662,9 +1657,9 @@ export const questions = [
     "id": "q87"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "UDP and TCP are protocols at which layer in the TCP/IP protocol suite?",
@@ -1682,9 +1677,9 @@ export const questions = [
     "id": "q88"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "URL stands for ____.",
@@ -1701,9 +1696,9 @@ export const questions = [
     "id": "q89"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "You can determine the IP address of your computer on a UNIX machine by using the ______ command.",
@@ -1721,9 +1716,9 @@ export const questions = [
     "id": "q90"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "This command ___ will tell you whether a host on the Internet is up and responding, or not.",
@@ -1741,9 +1736,9 @@ export const questions = [
     "id": "q91"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "The main function of the IP protocol is _____.",
@@ -1760,9 +1755,9 @@ export const questions = [
     "id": "q92"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "TTL in the ping command is ______.",
@@ -1779,9 +1774,9 @@ export const questions = [
     "id": "q93"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "DNS is the acronym for _____.",
@@ -1798,9 +1793,9 @@ export const questions = [
     "id": "q94"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "You can display the domain names and IP addresses of the hosts on your computer network with the _____ command.",
@@ -1817,9 +1812,9 @@ export const questions = [
     "id": "q95"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "IPv4 address 127.0.0.1 is for _____.",
@@ -1836,9 +1831,9 @@ export const questions = [
     "id": "q96"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "TCP stands for ______.",
@@ -1855,9 +1850,9 @@ export const questions = [
     "id": "q97"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "IP and ICMP are _____.",
@@ -1874,9 +1869,9 @@ export const questions = [
     "id": "q98"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "ARPA stands for ___.",
@@ -1893,9 +1888,9 @@ export const questions = [
     "id": "q99"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "The ssh command _____.",
@@ -1912,9 +1907,9 @@ export const questions = [
     "id": "q100"
   },
   {
-    "set": "Extra",
+    "set": "3F",
     "sets": [
-      "Extra"
+      "3F"
     ],
     "topic": "Network",
     "stem": "You can find the routing information of the hosts from the current host to the target host with the ____ command.",
@@ -1931,9 +1926,9 @@ export const questions = [
     "id": "q101"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following statements about socket programming is not correct?",
@@ -1949,9 +1944,9 @@ export const questions = [
     "id": "q102"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following statements about socket programming with datagram is not correct?",
@@ -1968,9 +1963,9 @@ export const questions = [
     "id": "q103"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Consider the following code segment of a client after it connects to the echo server. After sending a message, it will receive the message as the echo server receives it and sends it back to the client. Complete the statement (underlined) below.\n\n// connect(sockfd,(struct sockaddr *)&servaddr,sizeof(servaddr));\nwhile (fgets(sendline, MAXLINE, stdin) != NULL) {\n    send(sockfd, sendline, strlen(sendline), 0);\n    ______(sockfd, recvline, MAXLINE, 0);\n    printf(\"%s\", \"String received from the server: \");\n    fputs(recvline, stdout);\n}",
@@ -1987,9 +1982,9 @@ export const questions = [
     "id": "q104"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following is common to both TCP and UDP?",
@@ -2005,9 +2000,9 @@ export const questions = [
     "id": "q105"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "A service provided by TCP is:",
@@ -2023,9 +2018,9 @@ export const questions = [
     "id": "q106"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following statements about socket programming (accept function) is not correct?",
@@ -2043,9 +2038,9 @@ export const questions = [
     "id": "q107"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following is an application layer protocol (e.g., in the TCP/IP model)?",
@@ -2061,9 +2056,9 @@ export const questions = [
     "id": "q108"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "A protocol architecture (e.g., TCP/IP) performs a task by implementing it as:",
@@ -2079,9 +2074,9 @@ export const questions = [
     "id": "q109"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which is not a classical method of IPC provided by various UNIX systems?",
@@ -2097,9 +2092,9 @@ export const questions = [
     "id": "q110"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following statements about socket programming is not correct?",
@@ -2116,9 +2111,9 @@ export const questions = [
     "id": "q111"
   },
   {
-    "set": "Extra",
+    "set": "3C",
     "sets": [
-      "Extra"
+      "3C"
     ],
     "topic": "APUE16",
     "stem": "Which of the following statements about socket programming (socket address) is not correct?",

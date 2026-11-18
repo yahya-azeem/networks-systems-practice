@@ -210,16 +210,9 @@
   });
 </script>
 
-<header class="hero">
-  <div class="wrap hero-inner">
-    <div>
-      <p class="eyebrow">CS review · Fall 2026</p>
-      <h1>Networks &amp; Systems Practice</h1>
-      <p class="sub">
-        {questions.length} multiple-choice questions · {additionalCount} additional · Instant feedback · Retry missed
-        questions · Shuffle practice
-      </p>
-    </div>
+<main class="wrap">
+  <div class="topline">
+    <h1>Networks &amp; Systems Practice</h1>
     <button
       class="theme-toggle"
       type="button"
@@ -234,9 +227,7 @@
       {/if}
     </button>
   </div>
-</header>
 
-<main class="wrap">
   <section class="toolbar card" aria-label="Practice controls">
     <div class="mode">
       <span class="mode-title">{finished ? 'Round complete' : 'Practice mode'}</span>
@@ -323,10 +314,9 @@
             <article class="review-row">
               <div class="review-meta">
                 <span class="tag">{entry.q.topic}</span>
+                <span class="tag ghost">{entry.q.sets.join(' · ')}</span>
                 {#if entry.q.additional}
-                  <span class="tag extra">Additional</span>
-                {:else}
-                  <span class="tag ghost">{entry.q.sets.join(' · ')}</span>
+                  <span class="tag extra">Extra</span>
                 {/if}
               </div>
               <p class="review-stem">{entry.q.stem}</p>
@@ -352,12 +342,11 @@
         <div class="qmeta">
           <div class="tags">
             <span class="tag">{current.q.topic}</span>
+            {#each current.q.sets as set}
+              <span class="tag ghost" title={setLabel(set)}>{set}</span>
+            {/each}
             {#if current.q.additional}
-              <span class="tag extra">Additional</span>
-            {:else}
-              {#each current.q.sets as set}
-                <span class="tag ghost" title={setLabel(set)}>{set}</span>
-              {/each}
+              <span class="tag extra">Extra</span>
             {/if}
           </div>
           <span class="counter">{index + 1} / {deck.length}</span>
@@ -418,7 +407,8 @@
     <kbd>←</kbd>/<kbd>→</kbd> to move between questions. Progress is saved in this browser.
   </p>
   <p class="tip footer-note">
-    Compiled from Review Quizzes 3A–3F plus {additionalCount} additional questions from a prior Test 3 set. Answers
-    reflect the posted keys and were checked against the APUE and Sobell material where possible.
+    Compiled from Review Quizzes 3A–3F plus {additionalCount} extra questions from a prior Test 3 set, mixed into
+    their matching sets. Answers reflect the posted keys and were checked against the APUE and Sobell material where
+    possible.
   </p>
 </main>

@@ -8,10 +8,10 @@ Live site: **https://yahya-azeem.github.io/networks-systems-practice/**
 
 ## Features
 
-- 112 multiple-choice questions (58 from the review quizzes + 54 additional)
-- Additional questions are marked with an **Additional** badge and included by default
+- 112 multiple-choice questions (58 from the review quizzes + 54 extra)
+- Extra questions are marked with an **Extra** badge and included in their matching sets by default
 - Instant feedback: correct answer highlighted, wrong pick marked, key shown
-- Filter by set (3A–3F, Extra) or practice all questions
+- Filter by set (3A–3F) or practice all questions
 - Shuffle question order and answer order
 - Back / next navigation and a progress bar
 - Results screen with score ring and a review of every missed question
@@ -36,13 +36,15 @@ The compiler:
 - extracts each prompt, options, and keyed answer
 - merges questions that appear in more than one review set (11 duplicates were merged)
 - drops one review prompt that depends on a diagram missing from the text export
-- appends the additional bank, marked `additional: true` and grouped under `Extra`
+- appends the additional bank, marked `additional: true` and filed into the matching review set
+  (`APUE11` → 3B, `APUE16` → 3C, `Network` → 3F)
 - assigns topic tags from the `[TCPIP-UNP]`, `[APUE11.6]`, `[Cloud]`, etc. prefixes
 
 ### Additional bank notes
 
-The additional bank started as 80 Quizlet cards. 54 were added. The other 26 were
-left out deliberately:
+The additional bank started as 80 Quizlet cards. 54 were added. They are mixed
+into their matching sets by default and carry an **Extra** badge. The other 26
+were left out deliberately:
 
 - 15 duplicate a question already in the review bank
 - 4 duplicate another card inside the additional bank
