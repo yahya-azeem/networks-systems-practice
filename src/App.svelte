@@ -2,10 +2,11 @@
   import { onMount } from 'svelte';
   import { questions, sets } from './lib/questions.js';
 
-  const STORAGE_KEY = 'networks-systems-practice:v1';
+  const STORAGE_KEY = 'networks-systems-practice:v2';
   const THEME_KEY = 'networks-systems-practice:theme';
   const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const byId = new Map(questions.map((question) => [question.id, question]));
+  const additionalCount = questions.filter((question) => question.additional).length;
 
   function shuffled(items) {
     const copy = [...items];
@@ -215,7 +216,8 @@
       <p class="eyebrow">CS review · Fall 2026</p>
       <h1>Networks &amp; Systems Practice</h1>
       <p class="sub">
-        {questions.length} multiple-choice questions · Instant feedback · Retry missed questions · Shuffle practice
+        {questions.length} multiple-choice questions · {additionalCount} additional · Instant feedback · Retry missed
+        questions · Shuffle practice
       </p>
     </div>
     <button
@@ -321,7 +323,11 @@
             <article class="review-row">
               <div class="review-meta">
                 <span class="tag">{entry.q.topic}</span>
-                <span class="tag ghost">{entry.q.sets.join(' · ')}</span>
+                {#if entry.q.additional}
+                  <span class="tag extra">Additional</span>
+                {:else}
+                  <span class="tag ghost">{entry.q.sets.join(' · ')}</span>
+                {/if}
               </div>
               <p class="review-stem">{entry.q.stem}</p>
               <p class="wrong"><span>Your answer</span> {String.fromCharCode(65 + entry.order.indexOf(chosen))}. {entry.q.options[chosen]}</p>
@@ -346,9 +352,13 @@
         <div class="qmeta">
           <div class="tags">
             <span class="tag">{current.q.topic}</span>
-            {#each current.q.sets as set}
-              <span class="tag ghost" title={setLabel(set)}>{set}</span>
-            {/each}
+            {#if current.q.additional}
+              <span class="tag extra">Additional</span>
+            {:else}
+              {#each current.q.sets as set}
+                <span class="tag ghost" title={setLabel(set)}>{set}</span>
+              {/each}
+            {/if}
           </div>
           <span class="counter">{index + 1} / {deck.length}</span>
         </div>
@@ -408,6 +418,7 @@
     <kbd>←</kbd>/<kbd>→</kbd> to move between questions. Progress is saved in this browser.
   </p>
   <p class="tip footer-note">
-    Compiled from Review Quizzes 3A–3F. Answers reflect the posted key; repeated questions across sets were merged.
+    Compiled from Review Quizzes 3A–3F plus {additionalCount} additional questions from a prior Test 3 set. Answers
+    reflect the posted keys and were checked against the APUE and Sobell material where possible.
   </p>
 </main>

@@ -380,6 +380,18 @@ button.secondary svg {
   color: var(--muted);
 }
 
+.tag.extra {
+  background: #fff1c9;
+  color: #7a5300;
+  border: 1px solid #e8c56a;
+}
+
+:root[data-theme='dark'] .tag.extra {
+  background: #33280f;
+  color: #f4ca65;
+  border-color: #66501f;
+}
+
 .counter {
   color: var(--muted);
   font-size: 0.86rem;
