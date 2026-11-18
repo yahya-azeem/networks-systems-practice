@@ -4,6 +4,7 @@
 
   const STORAGE_KEY = 'networks-systems-practice:v2';
   const THEME_KEY = 'networks-systems-practice:theme';
+  const CTA_KEY = 'networks-systems-practice:cta';
   const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const byId = new Map(questions.map((question) => [question.id, question]));
   const additionalCount = questions.filter((question) => question.additional).length;
@@ -42,6 +43,7 @@
   let finished = $state(false);
   let theme = $state('light');
   let ready = $state(false);
+  let showCta = $state(true);
 
   const current = $derived(deck[index]);
   const selected = $derived(current ? picks[current.id] : undefined);
@@ -108,6 +110,15 @@
     theme = theme === 'dark' ? 'light' : 'dark';
   }
 
+  function dismissCta() {
+    showCta = false;
+    try {
+      localStorage.setItem(CTA_KEY, 'hidden');
+    } catch {
+      // Ignore storage failures.
+    }
+  }
+
   function setLabel(setId) {
     const set = sets.find((item) => item.id === setId);
     return set ? set.name : setId;
@@ -171,6 +182,7 @@
     try {
       const savedTheme = localStorage.getItem(THEME_KEY);
       theme = savedTheme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      showCta = localStorage.getItem(CTA_KEY) !== 'hidden';
     } catch {
       theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
@@ -412,3 +424,30 @@
     possible.
   </p>
 </main>
+
+{#if showCta}
+  <aside class="gh-cta" aria-label="GitHub links">
+    <a
+      class="gh-link gh-star"
+      href="https://github.com/yahya-azeem/networks-systems-practice"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Open the repo and star it on GitHub"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" /></svg>
+      <span class="gh-long">Star this repo</span><span class="gh-short">Star</span>
+    </a>
+    <span class="gh-dot" aria-hidden="true">·</span>
+    <a
+      class="gh-link"
+      href="https://github.com/yahya-azeem"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Follow @yahya-azeem on GitHub"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5.1 5.1 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5.1 5.1 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22" /></svg>
+      <span class="gh-long">Follow me</span><span class="gh-short">Follow</span>
+    </a>
+    <button class="gh-close" type="button" onclick={dismissCta} aria-label="Dismiss GitHub links">×</button>
+  </aside>
+{/if}
